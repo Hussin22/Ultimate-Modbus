@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="614.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="modbus_tcp.Modbus_TcpController">
+   <children>
+      <ImageView fitHeight="96.0" fitWidth="227.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@modbus.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="IP" layoutX="85.0" layoutY="103.0" prefHeight="34.0" prefWidth="175.0" promptText="0.0.0.0" text="192.168.1.105">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="42.0" layoutY="103.0" prefHeight="34.0" prefWidth="43.0" text="IP : ">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PORT" layoutX="353.0" layoutY="103.0" prefHeight="34.0" prefWidth="175.0" promptText="PORT" text="5002">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="280.0" layoutY="103.0" prefHeight="34.0" prefWidth="73.0" text="PORT : ">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="Connect" layoutX="192.0" layoutY="163.0" mnemonicParsing="false" onAction="#Connect" prefHeight="34.0" prefWidth="111.0" text="Connect">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Disconnect" layoutX="312.0" layoutY="163.0" mnemonicParsing="false" onAction="#Disconnect" prefHeight="34.0" prefWidth="111.0" text="Disconected">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="369.0" layoutY="240.0" mnemonicParsing="false" onAction="#wCoils" prefHeight="51.0" prefWidth="111.0" text="Write Coil">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="369.0" layoutY="301.0" mnemonicParsing="false" onAction="#rCoils" prefHeight="51.0" prefWidth="111.0" text="Read Coil">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="328.0" layoutY="452.0" mnemonicParsing="false" onAction="#Wregi" prefHeight="51.0" prefWidth="133.0" text="Write Reg">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="467.0" layoutY="452.0" mnemonicParsing="false" onAction="#Rregi" prefHeight="51.0" prefWidth="133.0" text="Read Reg">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="87.0" layoutY="452.0" mnemonicParsing="false" onAction="#rinputs" prefHeight="51.0" prefWidth="133.0" text="Read Discrete Input">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="Acoil" layoutX="135.0" layoutY="240.0" prefHeight="51.0" prefWidth="222.0" promptText="address">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Vcoil" layoutX="135.0" layoutY="301.0" prefHeight="51.0" prefWidth="222.0" promptText="Value">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Vinput" layoutX="157.0" layoutY="390.0" prefHeight="51.0" prefWidth="133.0" promptText="Value">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Ainput" layoutX="17.0" layoutY="390.0" prefHeight="51.0" prefWidth="133.0" promptText="address">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Vreg" layoutX="467.0" layoutY="390.0" prefHeight="51.0" prefWidth="133.0" promptText="Value">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Areg" layoutX="327.0" layoutY="390.0" prefHeight="51.0" prefWidth="133.0" promptText="address">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="Linkedin" layoutX="308.0" layoutY="14.0" mnemonicParsing="false" onAction="#linkdin" prefHeight="51.0" prefWidth="133.0" text="My linkedin">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Ln.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="How" layoutX="467.0" layoutY="14.0" mnemonicParsing="false" onAction="#Tutorial" prefHeight="51.0" prefWidth="133.0" text="How To Use ?">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@YT.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

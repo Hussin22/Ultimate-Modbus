@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Modbus_Tcp.jnlp">
+  <information>
+    <title>Modbus_Tcp</title>
+    <vendor>TE326187</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Modbus_Tcp.jar" size="135305" download="eager" />
+    <jar href="lib\EasyModbusJava.jar" size="97272" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="modbus_tcp.Modbus_Tcp"  name="Modbus_Tcp" />
+  <update check="always"/>
+</jnlp>
